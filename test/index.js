@@ -4,4 +4,5 @@
 describe('API Test suite', () => {
   require('./users');
   require('./sessions');
+  require('./visits');
 });
