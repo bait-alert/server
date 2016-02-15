@@ -1,5 +1,7 @@
 'use strict';
 
+const url = require('url');
+
 const Chance = require('chance');
 const request = require('supertest');
 
@@ -10,12 +12,15 @@ const orm = require('../services/orm');
 describe('create visit', () => {
   beforeEach(() => orm.sync({ force: true }));
 
-  it('should create a visit', () =>
-    request(app)
+  it('should create a visit', () => {
+    const visitedUrl = url.parse(chance.url());
+
+    return request(app)
       .post('/visits')
       .send({
-        url: chance.url()
+        host: visitedUrl.host,
+        path: visitedUrl.path
       })
-      .expect(201)
-  );
+      .expect(201);
+  });
 });
