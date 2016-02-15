@@ -1,1 +1,2 @@
-# server-boilerplate
+# server
+Bait alert server
