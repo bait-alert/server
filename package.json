@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "run": "bin/www",
+    "start": "bin/www",
     "test": "mocha"
   },
   "repository": {
