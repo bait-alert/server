@@ -2,7 +2,9 @@
   "name": "bait-alert-server",
   "version": "1.0.0",
   "description": "Bait alert server",
-  "engines" : { "node" : "5.6.0" },
+  "engines": {
+    "node": "5.6.0"
+  },
   "main": "index.js",
   "scripts": {
     "run": "bin/www",
@@ -30,6 +32,7 @@
     "base-64": "^0.1.0",
     "bcrypt": "^0.8.5",
     "bluebird": "^3.3.1",
+    "kcors": "^1.0.1",
     "koa": "^1.1.2",
     "koa-auth-header-parser": "^1.0.0",
     "koa-compose": "^2.3.0",
